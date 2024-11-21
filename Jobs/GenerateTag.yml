@@ -81,7 +81,7 @@ jobs:
           git add ${{ parameters.notes_file }}
           git commit -m "Release notes for $(tag_name)"
           git tag $(tag_name)
-          git push origin HEAD:$(Build.SourceBranchName)
+          git push origin HEAD:user/kanechen/generate_tag
           git push origin $(tag_name)
         continueOnError: false
         displayName: "Create Tag"
